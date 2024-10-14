@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>Spotify Clone</title>
+</head>
+
+<body class="bg-black">
+    <div class="container-fluid">
+        <!-- Navigation starts here -->
+        <nav class="navbar navbar-expand-lg w-100"
+            style="background: black; position: fixed; top: auto; left: auto; z-index: 10;">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><i class="bi bi-spotify fs-2 text-white"></i></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="bi bi-three-dots-vertical text-light"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <div class="col d-flex set" style="margin-left: 40%; width: auto;">
+                        <a class="mx-2 text-light">
+                            <i class="bi bi-house-door fs-4"></i>
+                        </a>
+                        <form class="d-flex text-light rounded-pill" style="background: rgba(33,33,33,1); display: flex; justify-content: center;" role="search">
+                            <button class="btn" type="submit">
+                                <i class="bi bi-search text-secondary"></i>
+                            </button>
+                            <input class="form-control rounded-pill"
+                                style="border: none; width: fit-content; background: rgba(33,33,33,1);"
+                                type="search" placeholder="What do you want to play?" aria-label="Search">
+                            <button class="btn" type="button">
+                                <i class="bi bi-box2 text-secondary"></i>
+                            </button>
+                        </form>
+                    </div>
+                    <div class="col navbar-nav mb-2 mb-lg-0 justify-content-end bts d-flex" style="flex-direction: row;">
+                        <button type="button" class="btn btn-dark rounded-pill" style="display: flex; justify-content: flex-end; margin-right: 20px;">Sign Up</button>
+                        <button type="button" class="btn btn-light rounded-pill" style="display: flex; justify-content: flex-end; margin-right: 20px;">Log In</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- Navigation ends here -->
+        <div class="row" style="top: 0;">
+            <div class="col-2 bg-dark rounded ms-3 pt-1 d-none d-lg-block" style="margin-top: 5%;" id="left">
+                <div class="row rounded p-3">
+                    <div class="row text-secondary fs-6">
+                        <div class="col-9">
+                            <p><i class="bi bi-journals"></i> Your Library</p>
+                        </div>
+                        <div class="col-2 fs-4">
+                            <i class="bi bi-plus"></i>
+                        </div>
+                    </div>
+                    <div class="col-12 my-2 bg-secondary rounded p-3">
+                        <h6 class="text-white">Create your first playlist</h6>
+                        <p class="text-white">Its easy to help you</p>
+                        <button type="button" class="btn btn-light px-1">Create playlist</button>
+                    </div>
+                    <div class="col-12 my-2 bg-secondary rounded px-3 pt-3">
+                        <h6 class="text-white">Let's find some podcasts to follow</h6>
+                        <p class="text-white">we'll keep you updated on new episodes</p>
+                    </div>
+                    <p>
+                        <a class="text-decoration-none text-secondary" style="font-size: 12px;" href="">Legal</a>
+                        <a class="text-decoration-none text-secondary" style="font-size: 12px;" href="">Safety & Privacy
+                            Center</a> <br>
+                        <a class="text-decoration-none text-secondary" style="font-size: 12px;" href="">Privacy
+                            Policy</a>
+                        <a class="text-decoration-none text-secondary" style="font-size: 12px;" href="">Cookies</a>
+                        <a class="text-decoration-none text-secondary" style="font-size: 12px;" href="">About Ads</a>
+                        <a class="text-decoration-none text-secondary" style="font-size: 12px;"
+                            href="">Accessibility</a>
+                    </p>
+                    <p>
+                        <a class="text-white" style="font-size: 12px;" href="">Cookies</a>
+                    </p>
+                    <button type="button" class="btn btn-outline-light rounded-pill my-2"
+                        style="width: 80px; font-size: 12px;"><i class="bi bi-globe2"></i> English</button>
+                </div>
+            </div>
+            <div class="col bg-dark text-secondary rounded mx-3 pt-5" style="margin-top: 5%;" id="right">
+                <div class="row mb-4">
+                    <!-- Popular artists -->
+                    <div class="row">
+                        <div class="col">
+                            <h4 class=""><a class="text-white text-decoration-none" href="">Popular artists</a></h4>
+                        </div>
+                        <div class="col">
+                            <p class="text-end" style="font-weight: 500;"><a class="text-white text-decoration-none"
+                                    href="">show all</a></p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="cards borderless rounded" style="width: 13rem; height:265px;">
+                            <img src="./images/Pritam.jpeg" class="card-img-top rounded-circle ps-2 pt-2"
+                                style="height: 200px; width: 200px;" alt="...">
+                            <button class="hover-button" style="background-color: transparent;" type="button"><i
+                                    class="bi bi-play-circle-fill"></i></button>
+                            <div class="card-body text-secondary">
+                                <h4 class="text-white">Pritam</h4>
+                                <p>Artist</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col d-none d-sm-block">
+                        <div class="cards borderless rounded" style="width: 13rem; height:265px;">
+                            <img src="./images/ARRahman.jpeg" class="card-img-top rounded-circle ps-2 pt-2"
+                                style="height: 200px; width: 200px;" alt="...">
+                            <button class="hover-button" style="background-color: transparent;" type="button"><i
+                                    class="bi bi-play-circle-fill"></i></button>
+                            <div class="card-body text-secondary">
+                                <h4 class="text-white">A.R.Rahman</h4>
+                                <p>Artist</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col d-none d-lg-block">
+                        <div class="cards borderless rounded" style="width: 13rem; height:265px;">
+                            <img src="./images/Sachin-Jigar.jpeg" class="card-img-top rounded-circle ps-2 pt-2"
+                                style="height: 200px; width: 200px;" alt="...">
+                            <button class="hover-button" style="background-color: transparent;" type="button"><i
+                                    class="bi bi-play-circle-fill"></i></button>
+                            <div class="card-body text-secondary">
+                                <h4 class="text-white">Sachin-Jigar</h4>
+                                <p>Artist</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col d-none d-xl-block">
+                        <div class="cards borderless rounded" style="width: 13rem; height:265px;">
+                            <img src="./images/Arjit-singh.jpeg" class="card-img-top rounded-circle ps-2 pt-2"
+                                style="height: 200px; width: 200px;" alt="...">
+                            <button class="hover-button" style="background-color: transparent;" type="button"><i
+                                    class="bi bi-play-circle-fill"></i></button>
+                            <div class="card-body text-secondary">
+                                <h4 class="text-white">Arijit Singh</h4>
+                                <p>Artist</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col d-none d-xxl-block">
+                        <div class="cards borderless rounded" style="width: 13rem; height:265px;">
+                            <img src="./images/Anirudh Ravichander.jpeg" class="card-img-top rounded-circle ps-2 pt-2"
+                                style="height: 200px; width: 200px;" alt="...">
+                            <button class="hover-button" style="background-color: transparent;" type="button"><i
+                                    class="bi bi-play-circle-fill"></i></button>
+                            <div class="card-body text-secondary">
+                                <h4 class="text-white">Anitudh Ravichander</h4>
+                                <p>Artist</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-4">
+                    <!-- Popular albums -->
+                    <div class="row">
+                        <div class="col">
+                            <h4 class=""><a class="text-white text-decoration-none" href="">Popular albums</a></h4>
+                        </div>
+                        <div class="col">
+                            <p class="text-end" style="font-weight: 500;"><a class="text-white text-decoration-none"
+                                    href="">show all</a></p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="cards borderless rounded" style="width: 13rem; height:265px;">
+                            <img src="./images/hys-glory.jpeg" class="card-img-top rounded ps-2 pt-2"
+                                style="height: 200px; width: 200px;" alt="...">
+                            <button class="hover-button" style="background-color: transparent;" type="button"><i
+                                    class="bi bi-play-circle-fill"></i></button>
+                            <div class="card-body text-secondary">
+                                <p class="text-white">Glory</p>
+                                <p>Yo Yo Honey Singh</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col d-none d-sm-block">
+                        <div class="cards borderless rounded" style="width: 13rem; height:265px;">
+                            <img src="./images/Aashiqui2.jpeg" class="card-img-top ps-2 pt-2"
+                                style="height: 200px; width: 200px;" alt="...">
+                            <button class="hover-button" style="background-color: transparent;" type="button"><i
+                                    class="bi bi-play-circle-fill"></i></button>
+                            <div class="card-body text-secondary">
+                                <p class="text-white">Aashiqui 2</p>
+                                <p>Mithoon,Ankit Tiwari,Jeet Gannguli</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col d-none d-lg-block">
+                        <div class="cards borderless rounded" style="width: 13rem; height:265px;">
+                            <img src="./images/3rdwali.jpeg" class="card-img-top rounded ps-2 pt-2"
+                                style="height: 200px; width: 200px;" alt="...">
+                            <button class="hover-button" style="background-color: transparent;" type="button"><i
+                                    class="bi bi-play-circle-fill"></i></button>
+                            <div class="card-body text-secondary">
+                                <p class="text-white">Love Hotel
+                                <p>
+                                <p>leftovermax</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col d-none d-xl-block">
+                        <div class="cards borderless rounded" style="width: 13rem; height:265px;">
+                            <img src="./images/4th wali.jpeg" class="card-img-top rounded ps-2 pt-2"
+                                style="height: 200px; width: 200px;" alt="...">
+                            <button class="hover-button" style="background-color: transparent;" type="button"><i
+                                    class="bi bi-play-circle-fill"></i></button>
+                            <div class="card-body text-secondary">
+                                <p class="text-white">Making Memories</p>
+                                <p>Karan Aujla, Ikky</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col d-none d-xxl-block">
+                        <div class="cards borderless rounded" style="width: 13rem; height:265px;">
+                            <img src="./images/aajkiraatmajahusnkaaankhaselijiye.jpeg"
+                                class="card-img-top rounded ps-2 pt-2" style="height: 200px; width: 200px;" alt="...">
+                            <button class="hover-button" style="background-color: transparent;" type="button"><i
+                                    class="bi bi-play-circle-fill"></i></button>
+                            <div class="card-body text-secondary">
+                                <p class="text-white">Aaj Ki Raat(From "Stree2")</p>
+                                <p>Sachin-Jigar,Amitabh Bhattacharya</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-4">
+                    <!-- Popular radio -->
+                    <div class="row">
+                        <div class="col">
+                            <h4 class=""><a class="text-white text-decoration-none" href="">Popular radio</a></h4>
+                        </div>
+                        <div class="col">
+                            <p class="text-end" style="font-weight: 500;"><a class="text-white text-decoration-none"
+                                    href="">show all</a></p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="cards borderless rounded" style="width: 13rem; height:265px;">
+                            <img src="./images/radio-arijit.jpeg" class="card-img-top rounded ps-2 pt-2"
+                                style="height: 200px; width: 200px;" alt="...">
+                            <button class="hover-button" style="background-color: transparent;" type="button"><i
+                                    class="bi bi-play-circle-fill"></i></button>
+                            <div class="card-body text-secondary">
+                                <p>With Atif Aslam, Sachin-Jigar, Vishal-Shekhar</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col d-none d-sm-block">
+                        <div class="cards borderless rounded" style="width: 13rem; height:265px;">
+                            <img src="./images/radio-diljit.jpeg" class="card-img-top rounded ps-2 pt-2"
+                                style="height: 200px; width: 200px;" alt="...">
+                            <button class="hover-button" style="background-color: transparent;" type="button"><i
+                                    class="bi bi-play-circle-fill"></i></button>
+                            <div class="card-body text-secondary">
+                                <p>With Karan Aujla, Shubh, AP Dhillon and...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col d-none d-lg-block">
+                        <div class="cards borderless rounded" style="width: 13rem; height:265px;">
+                            <img src="./images/Arjit.jpg" class="card-img-top rounded ps-2 pt-2"
+                                style="height: 200px; width: 200px;" alt="...">
+                            <button class="hover-button" style="background-color: transparent;" type="button"><i
+                                    class="bi bi-play-circle-fill"></i></button>
+                            <div class="card-body text-secondary">
+                                <p>With Pritam, Mohit chulan</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col d-none d-xl-block">
+                        <div class="cards borderless rounded" style="width: 13rem; height:265px;">
+                            <img src="./images/radio-rahman.jpeg" class="card-img-top rounded ps-2 pt-2"
+                                style="height: 200px; width: 200px;" alt="...">
+                            <button class="hover-button" style="background-color: transparent;" type="button"><i
+                                    class="bi bi-play-circle-fill"></i></button>
+                            <div class="card-body text-secondary">
+                                <p>With Anirudh Ravichander, Harris Jayaraj,G.V.Prakash</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col d-none d-xxl-block">
+                        <div class="cards borderless rounded" style="width: 13rem; height:265px;">
+                            <img src="./images/radio-Aujla.jpeg" class="card-img-top rounded ps-2 pt-2"
+                                style="height: 200px; width: 200px;" alt="...">
+                            <button class="hover-button" style="background-color: transparent;" type="button"><i
+                                    class="bi bi-play-circle-fill"></i></button>
+                            <div class="card-body text-secondary">
+                                <p>With Shubh, Diljit Dosanjh, Sidhu Moose wala and more</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-4">
+                    <!-- Feature Charts -->
+                    <div class="row">
+                        <div class="col">
+                            <h4 class=""><a class="text-white text-decoration-none" href="">Feature Charts</a></h4>
+                        </div>
+                        <div class="col">
+                            <p class="text-end" style="font-weight: 500;"><a class="text-white text-decoration-none"
+                                    href="">show all</a></p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="cards borderless rounded" style="width: 13rem; height:265px;">
+                            <img src="./images/TopsongsGlobal.jpg" class="card-img-top rounded ps-2 pt-2"
+                                style="height: 200px; width: 200px;" alt="...">
+                            <button class="hover-button" style="background-color: transparent;" type="button"><i
+                                    class="bi bi-play-circle-fill"></i></button>
+                            <div class="card-body text-secondary">
+                                <p>Your weekly update of the most played...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col d-none d-sm-block">
+                        <div class="cards borderless rounded" style="width: 13rem; height:265px;">
+                            <img src="./images/TopsongsUSA.jpg" class="card-img-top rounded ps-2 pt-2"
+                                style="height: 200px; width: 200px;" alt="...">
+                            <button class="hover-button" style="background-color: transparent;" type="button"><i
+                                    class="bi bi-play-circle-fill"></i></button>
+                            <div class="card-body text-secondary">
+                                <p>Your weekly update of the most played...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col d-none d-lg-block">
+                        <div class="cards borderless rounded" style="width: 13rem; height:265px;">
+                            <img src="./images/Top-50-Global.jpg" class="card-img-top rounded ps-2 pt-2"
+                                style="height: 200px; width: 200px;" alt="...">
+                            <button class="hover-button" style="background-color: transparent;" type="button"><i
+                                    class="bi bi-play-circle-fill"></i></button>
+                            <div class="card-body text-secondary">
+                                <p>Your daily update of the most played...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col d-none d-xl-block">
+                        <div class="cards borderless rounded" style="width: 13rem; height:265px;">
+                            <img src="./images/Top-5-USA.jpg" class="card-img-top rounded ps-2 pt-2"
+                                style="height: 200px; width: 200px;" alt="...">
+                            <button class="hover-button" style="background-color: transparent;" type="button"><i
+                                    class="bi bi-play-circle-fill"></i></button>
+                            <div class="card-body text-secondary">
+                                <p>Your daily update of the most played tracks right now-USA.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col d-none d-xxl-block">
+                        <div class="cards borderless rounded" style="width: 13rem; height:265px;">
+                            <img src="./images/Viral-50.jpg" class="card-img-top rounded ps-2 pt-2"
+                                style="height: 200px; width: 200px;" alt="...">
+                            <button class="hover-button" style="background-color: transparent;" type="button"><i
+                                    class="bi bi-play-circle-fill"></i></button>
+                            <div class="card-body text-secondary">
+                                <p>Your daily update of the most viral tracks right now-Global.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-4">
+                    <!-- Spotify PLaylists -->
+                    <div class="row">
+                        <div class="col">
+                            <h4 class=""><a class="text-white text-decoration-none" href="">Spotify PLaylists</a></h4>
+                        </div>
+                        <div class="col">
+                            <p class="text-end" style="font-weight: 500;"><a class="text-white text-decoration-none"
+                                    href="">show all</a></p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="cards borderless rounded" style="width: 13rem; height:265px;">
+                            <img src="./images/ChillHits.jpeg" class="card-img-top rounded ps-2 pt-2"
+                                style="height: 200px; width: 200px;" alt="...">
+                            <button class="hover-button" style="background-color: transparent;" type="button"><i
+                                    class="bi bi-play-circle-fill"></i></button>
+                            <div class="card-body text-secondary">
+                                <p>Kick back to the best new and recent chill...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col d-none d-sm-block">
+                        <div class="cards borderless rounded" style="width: 13rem; height:265px;">
+                            <img src="./images/Songs to sing in the car.jpeg" class="card-img-top rounded ps-2 pt-2"
+                                style="height: 200px; width: 200px;" alt="...">
+                            <button class="hover-button" style="background-color: transparent;" type="button"><i
+                                    class="bi bi-play-circle-fill"></i></button>
+                            <div class="card-body text-secondary">
+                                <p>Sing along and enjoy the drive</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col d-none d-lg-block">
+                        <div class="cards borderless rounded" style="width: 13rem; height:265px;">
+                            <img src="./images/Mint.jpeg" class="card-img-top rounded ps-2 pt-2"
+                                style="height: 200px; width: 200px;" alt="...">
+                            <button class="hover-button" style="background-color: transparent;" type="button"><i
+                                    class="bi bi-play-circle-fill"></i></button>
+                            <div class="card-body text-secondary">The world's biggest dance & electronic hit.
+                                Cover:PAWSA</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col d-none d-xl-block">
+                        <div class="cards borderless rounded" style="width: 13rem; height:265px;">
+                            <img src="./images/RockClassic.jpeg" class="card-img-top rounded ps-2 pt-2"
+                                style="height: 200px; width: 200px;" alt="...">
+                            <button class="hover-button" style="background-color: transparent;" type="button"><i
+                                    class="bi bi-play-circle-fill"></i></button>
+                            <div class="card-body text-secondary">
+                                <p>Rock legend & epic songs that continue to inspire generation...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col d-none d-xxl-block">
+                        <div class="cards borderless rounded" style="width: 13rem; height:265px;">
+                            <img src="./images/ChillOutLounge.jpeg" class="card-img-top rounded ps-2 pt-2"
+                                style="height: 200px; width: 200px;" alt="...">
+                            <button class="hover-button" style="background-color: transparent;" type="button"><i
+                                    class="bi bi-play-circle-fill"></i></button>
+                            <div class="card-body text-secondary">
+                                <p>Just lean back and enjoy relaxed beats</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Footer starts here -->
+                <div class="row">
+                    <div class="col-sm-5 col-lg-2">
+                        <p class="text-white" style="font-size: 14px; font-weight:700;">Company</p>
+                        <ul class="list-unstyled">
+                            <li><a class="text-decoration-none text-secondary" href="">About</a></li>
+                            <li><a class="text-decoration-none text-secondary" href="">Jobs</a></li>
+                            <li><a class="text-decoration-none text-secondary" href="">For the Record</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-5 col-lg-2">
+                        <p class="text-white" style="font-size: 14px; font-weight:700;">Communities</p>
+                        <ul class="list-unstyled">
+                            <li><a class="text-decoration-none text-secondary" href="">For Artists</a></li>
+                            <li><a class="text-decoration-none text-secondary" href="">Developers</a></li>
+                            <li><a class="text-decoration-none text-secondary" href="">Advertising</a></li>
+                            <li><a class="text-decoration-none text-secondary" href="">Investors</a></li>
+                            <li><a class="text-decoration-none text-secondary" href="">Vendors</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-5 col-lg-2">
+                        <p class="text-white" style="font-size: 14px; font-weight:700;">Useful links</p>
+                        <ul class="list-unstyled">
+                            <li><a class="text-decoration-none text-secondary" href="">Support</a></li>
+                            <li><a class="text-decoration-none text-secondary" href="">Free Mobile App</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-5 col-lg-2">
+                        <p class="text-white" style="font-size: 14px; font-weight:700;">Spotify Plans</p>
+                        <ul class="list-unstyled">
+                            <li><a class="text-decoration-none text-secondary" href="">Premium Individuals</a></li>
+                            <li><a class="text-decoration-none text-secondary" href="">Premium Duo</a></li>
+                            <li><a class="text-decoration-none text-secondary" href="">Premium Family</a></li>
+                            <li><a class="text-decoration-none text-secondary" href="">Premium Student</a></li>
+                            <li><a class="text-decoration-none text-secondary" href="">Spotify Free</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-5 col-lg-3">
+                        <p class="fs-3">
+                            <i class="bi bi-instagram p-1"></i>
+                            <i class="bi bi-twitter p-1"></i>
+                            <i class="bi bi-facebook p-1"></i>
+                        </p>
+                    </div>
+                    <hr>
+                    <p style="font-size: 12px;">&copy; 2024 Spotify AB</p>
+                </div>
+
+                <!-- Footer ends here -->
+            </div>
+        </div>
+        <!-- Main body ends here -->
+
+    </div>
+    <script src="./bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

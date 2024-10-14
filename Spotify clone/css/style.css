@@ -1,0 +1,75 @@
+.cards:hover{
+    background: rgb(76, 76, 76);
+    /* transform: scale(1.01); */
+}
+.cards {
+    position: relative;
+    display: inline-block;
+}
+
+.hover-button {
+    color: #3be377;
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(50%);
+    border: none;
+    cursor: pointer;
+    font-size: 50px;
+}
+
+.cards:hover .hover-button {
+    transition: transform 0.5s;
+    display: block;
+}
+
+@media screen and (max-width: 991px) {
+    .bts{
+        max-width: fit-content;
+        margin-left: 40%;
+        margin-top: 15px;
+    }
+}
+
+.navbar .row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.navbar .row> .col {
+    flex: 0 0 auto;
+    width: 100%;
+}
+
+::placeholder{
+    color: white;
+}
+
+.set{
+    max-width: fit-content;
+    margin-left: 0 !important;
+    max-width: fit-content;
+}
+
+@media screen and (max-width: 414px) {
+    .set{
+            max-width: fit-content;
+            margin-left: 0 !important;
+            max-width: fit-content;
+        }
+        .bts{
+            max-width: fit-content;
+            margin-left: 25% !important;
+        }
+        .c-x{
+            display: flex;
+            justify-content: space-around !important;
+        }
+    }
+
+/* #right{
+    position: relative;
+    left: 17%;
+    padding-top: 5%;
+} */
